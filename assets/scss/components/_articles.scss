@@ -1,0 +1,73 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+article {
+  padding: 24px;
+  border: 2px solid $clr-accent;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 2px hsla(0, 0%, 0%, 0.025);
+  position: relative;
+  display: grid;
+  gap: 16px;
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: $clr-accent;
+  top: 0;
+  left: 0;
+  border-radius: 16px 16px 0 0;
+}
+
+.information {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.information li {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.information span {
+  display: block;
+  font-weight: 400;
+}
+
+.date-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.date-box {
+  border-radius: 4px;
+  background-color: #b272f2;
+  color: $clr-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  box-shadow: 0 2px 4px 2px hsla(0, 0%, 0%, 0.025);
+}
+
+.day,
+.month {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.date {
+  font-size: 20px;
+  font-weight: 600;
+}

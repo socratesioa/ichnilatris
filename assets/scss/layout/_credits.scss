@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.credits-container {
+  display: grid;
+  gap: 16px;
+  @include respond(large, min) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
+    gap: 24px 48px;
+    align-items: start;
+  }
+}
+
+.credit {
+  display: grid;
+  gap: 8px;
+}
+
+.credit span {
+  font-weight: 600;
+}

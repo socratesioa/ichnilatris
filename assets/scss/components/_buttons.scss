@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.primary-btn {
+  border: 2px solid $clr-white;
+  padding: 12px;
+  color: $clr-white;
+  text-decoration: none;
+  @include text-preset(typo.$button-text);
+  text-transform: uppercase;
+  z-index: 999;
+}
+
+.primary-btn:hover {
+  background-color: $clr-white;
+  color: $clr-accent;
+}
+
+.lang-switch button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}

@@ -1,0 +1,80 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+header {
+  background-image: url("../assets/images/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 667px;
+  width: 100%;
+  position: relative;
+  @include respond(large, min) {
+    height: 100vh;
+  }
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  @include respond(small, min) {
+    padding: 48px;
+  }
+}
+
+.lang-switch {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-text {
+  color: $clr-white;
+  text-align: center;
+  height: 400px;
+  width: 100%;
+  padding: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+h1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero-text span {
+  @include text-preset(typo.$text-preset-2);
+  text-transform: uppercase;
+}
+
+.r-letter {
+  @include respond(small, min) {
+    font-size: 400px;
+  }
+}
+
+.hero-text p {
+  @include text-preset(typo.$hero-p);
+}
+
+.hero-heading {
+  display: grid;
+  gap: 24px;
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}

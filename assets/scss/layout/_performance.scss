@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.performance-container {
+  display: grid;
+  gap: 32px;
+  @include respond(large, min) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "dates info"
+      "dates location";
+  }
+}
+
+.location-article {
+  @include respond(large, min) {
+    grid-area: location;
+  }
+}
+
+.information-article {
+  @include respond(large, min) {
+    grid-area: info;
+  }
+}
+
+.dates-article {
+  @include respond(large, min) {
+    grid-area: dates;
+  }
+}

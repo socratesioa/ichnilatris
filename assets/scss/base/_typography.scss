@@ -1,0 +1,100 @@
+@use "../abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+$font-body: "Open Sans", sans-serif;
+$font-heading: "Literata", serif;
+
+$text-preset-1-mobile: (
+  family: $font-heading,
+  size: 32px,
+  lineHeight: 1.25,
+  letterSpacing: 1px,
+  weight: 700,
+);
+
+$text-preset-1-tablet: (
+  family: $font-heading,
+  size: 64px,
+  lineHeight: 1.25,
+  letterSpacing: 1px,
+  weight: 700,
+);
+
+$text-preset-2: (
+  family: $font-heading,
+  size: 20px,
+  lineHeight: 1.25,
+  letterSpacing: 1px,
+  weight: 700,
+);
+
+$text-preset-3: (
+  family: $font-body,
+  size: 48px,
+  lineHeight: 1.2,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-4: (
+  family: $font-body,
+  size: 18px,
+  lineHeight: 1.2,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$hero-p: (
+  family: $font-body,
+  size: 16px,
+  lineHeight: 1.2,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$button-text: (
+  family: $font-body,
+  size: 16px,
+  lineHeight: 1,
+  letterSpacing: 2px,
+  weight: 500,
+);
+
+body {
+  font-family: $font-body;
+}
+
+h1 {
+  @include text-preset($text-preset-1-mobile);
+  text-transform: uppercase;
+  @include respond(small, min) {
+    @include text-preset($text-preset-1-tablet);
+  }
+}
+
+h2 {
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+
+#performance h3 {
+  @include text-preset($text-preset-4);
+  display: block;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+#performance h3::after {
+  content: "";
+  width: 25%;
+  height: 2px;
+  background-color: $clr-accent;
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+}
+
+#cta h3 {
+  @include text-preset($text-preset-3);
+  z-index: 99;
+}
