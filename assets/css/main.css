@@ -95,14 +95,14 @@ section {
   white-space: nowrap;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
   -webkit-appearance: none; /* Safari/Chrome */
   appearance: textfield; /* Standard */
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -250,7 +250,7 @@ article::before {
 }
 
 header {
-  background-image: url("../assets/images/hero-mobile.jpg");
+  background-image: url("/assets/images/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
