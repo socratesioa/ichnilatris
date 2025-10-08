@@ -250,7 +250,7 @@ article::before {
 }
 
 header {
-  background-image: url("/assets/images/hero-mobile.jpg");
+  background-image: url("../images/hero-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
